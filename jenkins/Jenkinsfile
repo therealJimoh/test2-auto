@@ -1,0 +1,26 @@
+
+
+pipeline{
+    agent any
+    // tools {nodejs "Node"}
+
+    stages {
+        /* groovylint-disable-next-line UnnecessaryGString */
+        stage("Checkout target branch") {
+            steps {
+                checkout scm
+            }
+        }
+        /* groovylint-disable-next-line UnnecessaryGString */
+        stage ("build image") {
+            steps {
+                sh 'docker build -t test3-auto .'
+            }
+        }
+        // stage ("publish image") {
+        //     steps {
+        //         sh ''
+        //     }
+        // }
+    }
+}
