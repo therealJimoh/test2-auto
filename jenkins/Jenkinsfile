@@ -1,4 +1,4 @@
-
+@Library("shared-Library")_
 
 pipeline{
     agent any
@@ -14,7 +14,7 @@ pipeline{
         /* groovylint-disable-next-line UnnecessaryGString */
         stage ("build image") {
             steps {
-                sh 'docker build -t test3-auto .'
+                buildImage()
             }
         }
         // stage ("publish image") {
