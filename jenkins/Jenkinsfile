@@ -17,10 +17,10 @@ pipeline{
                 buildImage 'testauto40'
             }
         }
-        // stage ("publish image") {
-        //     steps {
-        //         sh ''
-        //     }
-        // }
+        stage ("publish image") {
+            steps {
+                loginDockerx()
+            }
+        }
     }
 }
