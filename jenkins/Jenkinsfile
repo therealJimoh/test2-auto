@@ -19,7 +19,7 @@ pipeline{
         }
         stage ("publish image") {
             steps {
-                loginDockerx()
+                loginDocker()
             }
         }
     }
