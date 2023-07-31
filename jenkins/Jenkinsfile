@@ -14,12 +14,13 @@ pipeline{
         /* groovylint-disable-next-line UnnecessaryGString */
         stage ("build image") {
             steps {
-                buildImage 'testauto40'
+                buildImage 'testauto40:1.0'
             }
         }
-        stage ("publish image") {
+        stage ("login and publish image") {
             steps {
                 loginDocker()
+                publishImage 'testauto40:1.0'
             }
         }
     }
