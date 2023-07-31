@@ -14,7 +14,7 @@ pipeline{
         /* groovylint-disable-next-line UnnecessaryGString */
         stage ("build image") {
             steps {
-                buildImage 'testauto40:1.0'
+                buildImage 'therealjimoh/testauto40:1.0'
             }
         }
         stage ("login and publish image") {
