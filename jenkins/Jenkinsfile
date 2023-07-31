@@ -20,7 +20,7 @@ pipeline{
         stage ("login and publish image") {
             steps {
                 loginDocker()
-                publishImage 'testauto40:1.0'
+                publishImage 'therealjimoh/testauto40:1.0'
             }
         }
     }
